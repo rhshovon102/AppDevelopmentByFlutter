@@ -28,7 +28,7 @@ class _front_pageState extends State<front_page> {
           Padding(
             padding: const EdgeInsets.all(8.0),
             child: IconButton(
-              icon: Icon(CupertinoIcons.profile_circled,size: 25.0),
+              icon: Icon(CupertinoIcons.profile_circled,size: 27.0),
               onPressed: (){
                 Navigator.push(
                     context,
@@ -58,21 +58,39 @@ class _front_pageState extends State<front_page> {
               children: [
 
                 SizedBox(height: 300.0),
-                Center(child: Text('RAKIB  HASAN',style: TextStyle(fontSize: 50.0,fontWeight: FontWeight.bold,color: Colors.white, fontFamily: 'Aclonica'))),
+                Text('RAKIB  HASAN',style: TextStyle(fontSize: 40.0,fontWeight: FontWeight.bold,color: Colors.white, fontFamily: 'Aclonica'),textAlign: TextAlign.center,),
 
                 Divider(thickness: 5,color: Colors.red),
-                Center(child: Text('Failue | Self-Motivated | Fast-Learner',style: TextStyle(color: Colors.white,fontSize: 20, fontFamily: 'Almendra'))),
+                Text('Failue | Selfish | Self-Motivated | Fast-Learner',style: TextStyle(color: Colors.white,fontSize: 20, fontFamily: 'Almendra'),textAlign: TextAlign.center,),
 
-                SizedBox(height: 10.0),
+                SizedBox(height: 5,),
                 Padding(
                   padding: const EdgeInsets.all(5.0),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
+                  child: Expanded(
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
 
-                      Container(
-                        decoration: BoxDecoration(borderRadius: BorderRadius.circular(5),color: Colors.white70,),
-                        child: SignInButton(
+                        Container(
+                          child: Link(
+                            target: LinkTarget.self,
+                            uri: Uri.parse('https://www.linkedin.com/in/rakibhasan3948/'),
+                            builder: (context, followLink) => CustomSignInButton(
+                              onPressed: followLink,
+                              splashColor: Colors.red,
+                              customIcon: FontAwesomeIcons.linkedinIn,
+                              iconColor: Colors.white,
+                              buttonColor: Colors.black54,
+                              mini: true,
+                            ),
+                          ),
+                        ),
+
+
+                        SizedBox(width: 10.0),
+                        Container(
+                          decoration: BoxDecoration(borderRadius: BorderRadius.circular(5),),
+                          child: CustomSignInButton(
                             onPressed: () {
 
 
@@ -88,56 +106,66 @@ class _front_pageState extends State<front_page> {
 
                             },
                             splashColor: Colors.red,
-                            button: Button.Email,
+                            customIcon: Icons.email,
+                            iconColor: Colors.white,
+                            buttonColor: Colors.black54,
                             mini: true,
                           ),
                         ),
 
-                      SizedBox(width: 5.0),
-                      Container(
-                        child: Link(
-                          target: LinkTarget.self,
-                          uri: Uri.parse('https://www.linkedin.com/in/rakibhasan3948/'),
-                          builder: (context, followLink) => SignInButton(
-                            onPressed: followLink,
-                            splashColor: Colors.red,
-                            button: Button.LinkedIn,
-                            mini: true,
+                        SizedBox(width: 10.0),
+                        Container(
+                          child: Link(
+                            target: LinkTarget.self,
+                            uri: Uri.parse('https://github.com/rakibhasan3948'),
+                            builder: (context, followLink) => CustomSignInButton(
+                              onPressed: followLink,
+                              splashColor: Colors.red,
+                              customIcon: FontAwesomeIcons.github,
+                              iconColor: Colors.white,
+                              buttonColor: Colors.black54,
+                              mini: true,
+                            ),
                           ),
                         ),
-                      ),
 
-                      SizedBox(width: 5.0),
-                      Container(
-                        child: Link(
-                          target: LinkTarget.self,
-                          uri: Uri.parse('https://github.com/rakibhasan3948'),
-                          builder: (context, followLink) => SignInButton(
-                            onPressed: followLink,
-                            splashColor: Colors.red,
-                            button: Button.GitHub,
-                            mini: true,
+                        SizedBox(width: 10.0),
+                        Container(
+                          child: Link(
+                            target: LinkTarget.self,
+                            uri: Uri.parse('https://www.facebook.com/profile.php?id=100094452325336'),
+                            builder: (context, followLink) => CustomSignInButton(
+                              onPressed: followLink,
+                              splashColor: Colors.red,
+                              customIcon: FontAwesomeIcons.facebookF,
+                              iconColor: Colors.white,
+                              buttonColor: Colors.black54,
+                              mini: true,
+                            ),
                           ),
                         ),
-                      ),
 
-                      SizedBox(width: 5.0),
-                      Container(
-                        child: Link(
-                          target: LinkTarget.self,
-                          uri: Uri.parse('https://www.facebook.com/profile.php?id=100094452325336'),
-                          builder: (context, followLink) => SignInButton(
-                            onPressed: followLink,
-                            splashColor: Colors.red,
-                            button: Button.Facebook,
-                            mini: true,
+
+                        SizedBox(width: 10.0),
+                        Container(
+                          child: Link(
+                            target: LinkTarget.self,
+                            uri: Uri.parse('https://www.instagram.com/rakibhasan3948/'),
+                            builder: (context, followLink) => CustomSignInButton(
+                              onPressed: followLink,
+                              splashColor: Colors.red,
+                              customIcon: FontAwesomeIcons.instagram,
+                              iconColor: Colors.white,
+                              buttonColor: Colors.black54,
+                              mini: true,
+                            ),
                           ),
                         ),
-                      ),
 
 
 
-                    ],
+                      ],
+                    ),
                   ),
                 )
               ],

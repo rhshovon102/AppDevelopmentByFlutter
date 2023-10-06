@@ -32,8 +32,8 @@ class _academicState extends State<academic> {
                           padding: const EdgeInsets.all(8.0),
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceEvenly,                            children: <Widget>[
-                              Image(image: AssetImage('images/university.png'),height: 130,width: 130,),
-                              Image(image: AssetImage('images/college.png'),height: 130,width: 130,),
+                              Expanded(child: Image(image: AssetImage('images/university.png'),height: 130,width: 130,)),
+                              Expanded(child: Image(image: AssetImage('images/college.png'),height: 130,width: 130,)),
                             ],
 
                           ),
@@ -43,31 +43,34 @@ class _academicState extends State<academic> {
                           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           children: <Widget>[
                             //SizedBox(width: 25),
-                            ElevatedButton(
-                              style: ButtonStyle(
-                                backgroundColor: MaterialStatePropertyAll<Color>(Colors.red)
+                            Expanded(
+                              child: ElevatedButton(
+                                style: ButtonStyle(
+                                  backgroundColor: MaterialStatePropertyAll<Color>(Colors.red)
+                                ),
+                                  onPressed:(){
+                                    Navigator.push(
+                                        context,
+                                        MaterialPageRoute(builder: (context) => university())
+                                    );
+                                  },
+                                  child: Text("University")
                               ),
-                                onPressed:(){
-                                  Navigator.push(
-                                      context,
-                                      MaterialPageRoute(builder: (context) => university())
-                                  );
-                                },
-                                child: Text("University")
                             ),
 
-                            //SizedBox(width: 160),
-                            ElevatedButton(
-                                style: ButtonStyle(
-                                    backgroundColor: MaterialStatePropertyAll<Color>(Colors.red)
-                                ),
-                                onPressed:(){
-                                  Navigator.push(
-                                      context,
-                                      MaterialPageRoute(builder: (context) => college())
-                                  );
-                                },
-                                child: Text("College")
+                            SizedBox(width: 5,),                            Expanded(
+                              child: ElevatedButton(
+                                  style: ButtonStyle(
+                                      backgroundColor: MaterialStatePropertyAll<Color>(Colors.red)
+                                  ),
+                                  onPressed:(){
+                                    Navigator.push(
+                                        context,
+                                        MaterialPageRoute(builder: (context) => college())
+                                    );
+                                  },
+                                  child: Text("College")
+                              ),
                             ),
                           ],
 
@@ -83,7 +86,7 @@ class _academicState extends State<academic> {
                           padding: const EdgeInsets.all(8.0),
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceEvenly,                            children: <Widget>[
-                              Image(image: AssetImage('images/school.png'),height: 130,width: 130,),
+                              Expanded(child: Image(image: AssetImage('images/school.png'),height: 130,width: 130,)),
                             ],
 
                           ),
@@ -92,17 +95,19 @@ class _academicState extends State<academic> {
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceEvenly,                          children: <Widget>[
                             //SizedBox(width: 160),
-                            ElevatedButton(
-                                style: ButtonStyle(
-                                    backgroundColor: MaterialStatePropertyAll<Color>(Colors.red)
-                                ),
-                                onPressed:(){
-                                  Navigator.push(
-                                      context,
-                                      MaterialPageRoute(builder: (context) => school())
-                                  );
-                                },
-                                child: Text("School")
+                            Expanded(
+                              child: ElevatedButton(
+                                  style: ButtonStyle(
+                                      backgroundColor: MaterialStatePropertyAll<Color>(Colors.red)
+                                  ),
+                                  onPressed:(){
+                                    Navigator.push(
+                                        context,
+                                        MaterialPageRoute(builder: (context) => school())
+                                    );
+                                  },
+                                  child: Text("School")
+                              ),
                             ),
 
                           ],

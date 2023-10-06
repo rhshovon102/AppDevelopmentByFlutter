@@ -19,7 +19,7 @@ class _RakibState extends State<Rakib> {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(fontFamily: 'Roboto'),
+      theme: ThemeData(fontFamily: 'Almendra'),
 
       home: front_page(),
 

@@ -30,7 +30,7 @@ class _experienceState extends State<experience> {
                         SizedBox(height: 5,),
 
 
-                        Text("Have No Experience",style: TextStyle(fontSize: 18),),
+                        Text("At present, I do not possess any prior experience.",style: TextStyle(fontSize: 18),textAlign: TextAlign.justify,),
 
                         SizedBox(height: 5,),
                         Divider(thickness: 5,color: Colors.red),

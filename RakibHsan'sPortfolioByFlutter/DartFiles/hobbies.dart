@@ -32,8 +32,8 @@ class _hobbiesState extends State<hobbies> {
                           padding: const EdgeInsets.all(8.0),
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceEvenly,                            children: <Widget>[
-                              Image(image: AssetImage('images/camera.png'),height: 130,width: 130,),
-                              Image(image: AssetImage('images/data.png'),height: 130,width: 130,),
+                              Expanded(child: Image(image: AssetImage('images/camera.png'),height: 130,width: 130,)),
+                              Expanded(child: Image(image: AssetImage('images/data.png'),height: 130,width: 130,)),
                             ],
 
                           ),
@@ -43,28 +43,32 @@ class _hobbiesState extends State<hobbies> {
                           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           children: <Widget>[
                             //SizedBox(width: 20),
-                            ElevatedButton(
-                                style: ButtonStyle(
-                                    backgroundColor: MaterialStatePropertyAll<Color>(Colors.red)
-                                ),
-                                onPressed:(){
-                                  Navigator.push(
-                                      context,
-                                      MaterialPageRoute(builder: (context) => photography())
-                                  );
-                                },
-                                child: Text("Photography")
+                            Expanded(
+                              child: ElevatedButton(
+                                  style: ButtonStyle(
+                                      backgroundColor: MaterialStatePropertyAll<Color>(Colors.red)
+                                  ),
+                                  onPressed:(){
+                                    Navigator.push(
+                                        context,
+                                        MaterialPageRoute(builder: (context) => photography())
+                                    );
+                                  },
+                                  child: Text("Photography")
+                              ),
                             ),
 
-                            //SizedBox(width: 160),
-                            ElevatedButton(
-                                style: ButtonStyle(
-                                    backgroundColor: MaterialStatePropertyAll<Color>(Colors.red)
-                                ),
-                                onPressed:(){
-                                  launchUrlString('https://www.beecrowd.com.br/judge/en/profile/548181');
-                                },
-                                child: Text("Coding")
+                            SizedBox(width: 5,),
+                            Expanded(
+                              child: ElevatedButton(
+                                  style: ButtonStyle(
+                                      backgroundColor: MaterialStatePropertyAll<Color>(Colors.red)
+                                  ),
+                                  onPressed:(){
+                                    launchUrlString('https://www.beecrowd.com.br/judge/en/profile/548181');
+                                  },
+                                  child: Text("Problem Solving")
+                              ),
                             ),
                           ],
 

@@ -33,8 +33,8 @@ class _skillsState extends State<skills> {
                           padding: const EdgeInsets.all(8.0),
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceEvenly,                            children: <Widget>[
-                              Image(image: AssetImage('images/appdevelopment.png'),height: 130,width: 130,),
-                              Image(image: AssetImage('images/machine-learning.png'),height: 130,width: 130,),
+                              Expanded(child: Image(image: AssetImage('images/appdevelopment.png'),height: 130,width: 130,)),
+                              Expanded(child: Image(image: AssetImage('images/machine-learning.png'),height: 130,width: 130,)),
                             ],
 
                           ),
@@ -44,25 +44,28 @@ class _skillsState extends State<skills> {
                           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           children: <Widget>[
                             //SizedBox(width: 10),
-                            ElevatedButton(
-                                style: ButtonStyle(
-                                    backgroundColor: MaterialStatePropertyAll<Color>(Colors.red)
-                                ),
-                                onPressed:(){
-                                  launchUrlString('https://github.com/rakibhasan3948/AndroidAppDevelopmentByFlutter');
-                                },
-                                child: Text("AppDevelopment")
+                            Expanded(
+                              child: ElevatedButton(
+                                  style: ButtonStyle(
+                                      backgroundColor: MaterialStatePropertyAll<Color>(Colors.red)
+                                  ),
+                                  onPressed:(){
+                                    launchUrlString('https://github.com/rakibhasan3948/AppDevelopmentByFlutter');
+                                  },
+                                  child: Text("AppDevelopment")
+                              ),
                             ),
 
-                            //SizedBox(width: 115),
-                            ElevatedButton(
-                                style: ButtonStyle(
-                                    backgroundColor: MaterialStatePropertyAll<Color>(Colors.red)
-                                ),
-                                onPressed:(){
-                                  launchUrlString('https://github.com/rakibhasan3948/DataMining-MachineLearning');
-                                },
-                                child: Text("MachineLearning")
+                            SizedBox(width: 5,),                            Expanded(
+                              child: ElevatedButton(
+                                  style: ButtonStyle(
+                                      backgroundColor: MaterialStatePropertyAll<Color>(Colors.red)
+                                  ),
+                                  onPressed:(){
+                                    launchUrlString('https://github.com/rakibhasan3948/DataMining-MachineLearning');
+                                  },
+                                  child: Text("MachineLearning")
+                              ),
                             ),
                           ],
 
@@ -78,8 +81,8 @@ class _skillsState extends State<skills> {
                           padding: const EdgeInsets.all(8.0),
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceEvenly,                            children: <Widget>[
-                              Image(image: AssetImage('images/compiler.png'),height: 130,width: 130,),
-                              Image(image: AssetImage('images/operating-system.png'),height: 130,width: 130,),
+                              Expanded(child: Image(image: AssetImage('images/compiler.png'),height: 130,width: 130,)),
+                              Expanded(child: Image(image: AssetImage('images/operating-system.png'),height: 130,width: 130,)),
                             ],
 
                           ),
@@ -89,25 +92,28 @@ class _skillsState extends State<skills> {
                           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           children: <Widget>[
                             //SizedBox(width: 10),
-                            ElevatedButton(
-                                style: ButtonStyle(
-                                    backgroundColor: MaterialStatePropertyAll<Color>(Colors.red)
-                                ),
-                                onPressed:(){
-                                  launchUrlString('https://github.com/rakibhasan3948/Compiler_Design');
-                                },
-                                child: Text("CompilerDesign")
+                            Expanded(
+                              child: ElevatedButton(
+                                  style: ButtonStyle(
+                                      backgroundColor: MaterialStatePropertyAll<Color>(Colors.red)
+                                  ),
+                                  onPressed:(){
+                                    launchUrlString('https://github.com/rakibhasan3948/Compiler_Design');
+                                  },
+                                  child: Text("CompilerDesign")
+                              ),
                             ),
 
-                            //SizedBox(width: 155),
-                            ElevatedButton(
-                                style: ButtonStyle(
-                                    backgroundColor: MaterialStatePropertyAll<Color>(Colors.red)
-                                ),
-                                onPressed:(){
-                                  launchUrlString('https://github.com/rakibhasan3948/Shell_Scripting_LINUX_OS');
-                                },
-                                child: Text("OS")
+                            SizedBox(width: 5,),                            Expanded(
+                              child: ElevatedButton(
+                                  style: ButtonStyle(
+                                      backgroundColor: MaterialStatePropertyAll<Color>(Colors.red)
+                                  ),
+                                  onPressed:(){
+                                    launchUrlString('https://github.com/rakibhasan3948/Shell_Scripting_LINUX_OS');
+                                  },
+                                  child: Text("OS")
+                              ),
                             ),
                           ],
 
@@ -124,8 +130,8 @@ class _skillsState extends State<skills> {
                           padding: const EdgeInsets.all(8.0),
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceEvenly,                            children: <Widget>[
-                              Image(image: AssetImage('images/oop.png'),height: 130,width: 130,),
-                              Image(image: AssetImage('images/algorithm.png'),height: 130,width: 130,),
+                              Expanded(child: Image(image: AssetImage('images/oop.png'),height: 130,width: 130,)),
+                              Expanded(child: Image(image: AssetImage('images/algorithm.png'),height: 130,width: 130,)),
                             ],
 
                           ),
@@ -135,25 +141,28 @@ class _skillsState extends State<skills> {
                           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           children: <Widget>[
                            // SizedBox(width: 42),
-                            ElevatedButton(
-                                style: ButtonStyle(
-                                    backgroundColor: MaterialStatePropertyAll<Color>(Colors.red)
-                                ),
-                                onPressed:(){
-                                  launchUrlString('https://github.com/rakibhasan3948/MOTU-Voice-Assistant-OOP2-Project-Used-Python-Programming-Language-');
-                                },
-                                child: Text("OOP")
+                            Expanded(
+                              child: ElevatedButton(
+                                  style: ButtonStyle(
+                                      backgroundColor: MaterialStatePropertyAll<Color>(Colors.red)
+                                  ),
+                                  onPressed:(){
+                                    launchUrlString('https://github.com/rakibhasan3948/MOTU-Voice-Assistant-OOP2-Project-Used-Python-Programming-Language-');
+                                  },
+                                  child: Text("OOP")
+                              ),
                             ),
 
-                            //SizedBox(width: 167),
-                            ElevatedButton(
-                                style: ButtonStyle(
-                                    backgroundColor: MaterialStatePropertyAll<Color>(Colors.red)
-                                ),
-                                onPressed:(){
-                                  launchUrlString('https://github.com/rakibhasan3948/Algorithm');
-                                },
-                                child: Text("Algorithm")
+                            SizedBox(width: 5,),                            Expanded(
+                              child: ElevatedButton(
+                                  style: ButtonStyle(
+                                      backgroundColor: MaterialStatePropertyAll<Color>(Colors.red)
+                                  ),
+                                  onPressed:(){
+                                    launchUrlString('https://github.com/rakibhasan3948/Algorithm');
+                                  },
+                                  child: Text("Algorithm")
+                              ),
                             ),
                           ],
 
@@ -171,8 +180,8 @@ class _skillsState extends State<skills> {
                           padding: const EdgeInsets.all(8.0),
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceEvenly,                            children: <Widget>[
-                              Image(image: AssetImage('images/assembler.png'),height: 130,width: 130,),
-                              Image(image: AssetImage('images/c_language.png'),height: 130,width: 130,),
+                              Expanded(child: Image(image: AssetImage('images/assembler.png'),height: 130,width: 130,)),
+                              Expanded(child: Image(image: AssetImage('images/c_language.png'),height: 130,width: 130,)),
                             ],
 
                           ),
@@ -182,25 +191,28 @@ class _skillsState extends State<skills> {
                           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           children: <Widget>[
                             //SizedBox(width: 5),
-                            ElevatedButton(
-                                style: ButtonStyle(
-                                    backgroundColor: MaterialStatePropertyAll<Color>(Colors.red)
-                                ),
-                                onPressed:(){
-                                  launchUrlString('https://github.com/rakibhasan3948/Restaurant-Mamgement-System-Assembly-Language-Project');
-                                },
-                                child: Text("AsselmbyLanguage")
+                            Expanded(
+                              child: ElevatedButton(
+                                  style: ButtonStyle(
+                                      backgroundColor: MaterialStatePropertyAll<Color>(Colors.red)
+                                  ),
+                                  onPressed:(){
+                                    launchUrlString('https://github.com/rakibhasan3948/Restaurant-Mamgement-System-Assembly-Language-Project');
+                                  },
+                                  child: Text("AsselmbyLanguage")
+                              ),
                             ),
 
-                            //SizedBox(width: 123),
-                            ElevatedButton(
-                                style: ButtonStyle(
-                                    backgroundColor: MaterialStatePropertyAll<Color>(Colors.red)
-                                ),
-                                onPressed:(){
-                                  launchUrlString('https://github.com/rakibhasan3948/Library-Management-system-usuing-C-Language');
-                                },
-                                child: Text("C_Language")
+                            SizedBox(width: 5,),                            Expanded(
+                              child: ElevatedButton(
+                                  style: ButtonStyle(
+                                      backgroundColor: MaterialStatePropertyAll<Color>(Colors.red)
+                                  ),
+                                  onPressed:(){
+                                    launchUrlString('https://github.com/rakibhasan3948/Library-Management-system-usuing-C-Language');
+                                  },
+                                  child: Text("C_Language")
+                              ),
                             ),
                           ],
 

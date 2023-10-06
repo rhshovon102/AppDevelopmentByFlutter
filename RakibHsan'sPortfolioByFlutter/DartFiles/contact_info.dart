@@ -32,21 +32,28 @@ class _contact_infoState extends State<contact_info> {
                       SizedBox(height: 10),
                       Image(image: AssetImage('images/rakib.png'),height: 300,width: 300),
 
-                      SizedBox(height: 15),
-                      Text("RAKIB HASAN",style: TextStyle(fontSize: 45,fontWeight: FontWeight.bold,fontFamily: 'Aclonica')),
+                      SizedBox(height: 20),
+                      Text("RAKIB HASAN",style: TextStyle(fontSize: 40,fontWeight: FontWeight.bold,fontFamily: 'Aclonica',color: Colors.black87)),
 
                       SizedBox(height: 10),
                       Divider(thickness: 5,color: Colors.red),
-                      SizedBox(height: 25),
+                      SizedBox(height: 20),
 
 
-                      Row(
-                        children: [
-                          Icon(FontAwesomeIcons.graduationCap,size: 40),
-                          SizedBox(width: 20),
-                          Expanded(child: Text("Pursuing a Bachelor of Science degree in Computer Science and Engineering",style: TextStyle(fontSize: 18),textAlign: TextAlign.justify,))
+                      GestureDetector(
+                        onTap: (){
+                          launchUrlString('https://www.daffodilvarsity.edu.bd/');
+                        },
+                        child: Expanded(
+                          child: Row(
+                            children: [
+                              Icon(Icons.school_outlined,size: 40),
+                              SizedBox(width: 20),
+                              Expanded(child: Text("Pursuing a Bachelor of Science degree in Computer Science and Engineering from Daffodil Internationl University",style: TextStyle(fontSize: 18),textAlign: TextAlign.justify,))
 
-                        ],
+                            ],
+                          ),
+                        ),
                       ),
 
                       SizedBox(height: 10),
@@ -54,13 +61,15 @@ class _contact_infoState extends State<contact_info> {
                         onTap: (){
                           launchUrlString('https://sites.google.com/diu.edu.bd/rakibhasan3948');
                         },
-                        child: Row(
-                          children: [
-                            Icon(Icons.link_outlined,size: 40),
+                        child: Expanded(
+                          child: Row(
+                            children: [
+                              Icon(Icons.link_outlined,size: 40),
 
-                            SizedBox(width: 20),
-                            Text("rakib hasan.me",style: TextStyle(fontSize: 18),)
-                          ],
+                              SizedBox(width: 20),
+                              Text("rakib hasan.me",style: TextStyle(fontSize: 18),)
+                            ],
+                          ),
                         ),
                       ),
 
@@ -77,12 +86,14 @@ class _contact_infoState extends State<contact_info> {
                           launchUrl(phone_no);
 
                         },
-                        child: Row(
-                          children: [
-                            Icon(Icons.call_outlined,size: 40),
-                            SizedBox(width: 20),
-                            Text("01632093102",style: TextStyle(fontSize: 18))
-                          ],
+                        child: Expanded(
+                          child: Row(
+                            children: [
+                              Icon(Icons.call_outlined,size: 40),
+                              SizedBox(width: 20),
+                              Text("01632093102",style: TextStyle(fontSize: 18))
+                            ],
+                          ),
                         ),
                       ),
 
@@ -99,12 +110,14 @@ class _contact_infoState extends State<contact_info> {
                           launchUrl(emailUri);
 
                         },
-                        child: Row(
-                          children: [
-                            Icon(Icons.email_outlined,size: 40),
-                            SizedBox(width: 20),
-                            Text("rakib15-3948@diu.edu.bd",style: TextStyle(fontSize: 18))
-                          ],
+                        child: Expanded(
+                          child: Row(
+                            children: [
+                              Icon(Icons.email_outlined,size: 40),
+                              SizedBox(width: 20),
+                              Text("rakib15-3948@diu.edu.bd",style: TextStyle(fontSize: 18))
+                            ],
+                          ),
                         ),
                       ),
 
@@ -114,103 +127,117 @@ class _contact_infoState extends State<contact_info> {
                           launchUrlString('https://maps.app.goo.gl/LqBSuXEJCUUcbHpZA');
 
                         },
-                        child: Row(
-                          children: [
-                            Icon(Icons.location_on_outlined,size: 40),
-                            SizedBox(width: 20),
-                            Expanded(child: Text("Moddhopara, Uttar Khan, Uttara, Dhaka-1230",style: TextStyle(fontSize: 18),textAlign: TextAlign.justify,))
-                          ],
+                        child: Expanded(
+                          child: Row(
+                            children: [
+                              Icon(Icons.location_on_outlined,size: 40),
+                              SizedBox(width: 20),
+                              Expanded(child: Text("Moddhopara, Uttar Khan, Uttara, Dhaka-1230",style: TextStyle(fontSize: 18),textAlign: TextAlign.justify,))
+                            ],
+                          ),
                         ),
                       ),
 
 
 
-                      SizedBox(height: 25),
+                      SizedBox(height: 15),
                       Divider(thickness: 5,color: Colors.red),
 
 
-                      SizedBox(height: 5),
-                      Center(child: Text("Follow Me",style: TextStyle(fontSize: 25,fontWeight: FontWeight.bold, fontFamily: 'Aclonica'))),
+                      SizedBox(height: 7),
+                      Center(child: Text("Follow Me",style: TextStyle(fontSize: 25,fontWeight: FontWeight.bold, fontFamily: 'Aclonica',color: Colors.black87))),
 
-                      SizedBox(height: 10),
+                      SizedBox(height: 5,),
                       Padding(
                         padding: const EdgeInsets.all(5.0),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
+                        child: Expanded(
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
 
-                            Container(
-                              child: Link(
-                                target: LinkTarget.self,
-                                uri: Uri.parse('https://www.linkedin.com/in/rakibhasan3948/'),
-                                builder: (context, followLink) => SignInButton(
-                                  onPressed: followLink,
-                                  splashColor: Colors.red,
-                                  button: Button.LinkedIn,
-                                  mini: true,
+                              Container(
+                                child: Link(
+                                  target: LinkTarget.self,
+                                  uri: Uri.parse('https://www.linkedin.com/in/rakibhasan3948/'),
+                                  builder: (context, followLink) => CustomSignInButton(
+                                    onPressed: followLink,
+                                    splashColor: Colors.red,
+                                    customIcon: FontAwesomeIcons.linkedinIn,
+                                    iconColor: Colors.white,
+                                    buttonColor: Colors.black87,
+                                    mini: true,
+                                  ),
                                 ),
                               ),
-                            ),
 
-                            SizedBox(width: 5.0),
-                            Container(
-                              child: Link(
-                                target: LinkTarget.self,
-                                uri: Uri.parse('https://github.com/rakibhasan3948'),
-                                builder: (context, followLink) => SignInButton(
-                                  onPressed: followLink,
-                                  splashColor: Colors.red,
-                                  button: Button.GitHub,
-                                  mini: true,
+                              SizedBox(width: 10.0),
+                              Container(
+                                child: Link(
+                                  target: LinkTarget.self,
+                                  uri: Uri.parse('https://github.com/rakibhasan3948'),
+                                  builder: (context, followLink) => CustomSignInButton(
+                                    onPressed: followLink,
+                                    splashColor: Colors.red,
+                                    customIcon: FontAwesomeIcons.github,
+                                    iconColor: Colors.white,
+                                    buttonColor: Colors.black87,
+                                    mini: true,
+                                  ),
                                 ),
                               ),
-                            ),
 
-                            SizedBox(width: 5.0),
-                            Container(
-                              child: Link(
-                                target: LinkTarget.self,
-                                uri: Uri.parse('https://www.youtube.com/channel/UCsrZEiUoR823FwxxURFknnw'),
-                                builder: (context, followLink) => SignInButton(
-                                  onPressed: followLink,
-                                  splashColor: Colors.red,
-                                  button: Button.YoutubeDark,
-                                  mini: true,
+                              SizedBox(width: 10.0),
+                              Container(
+                                child: Link(
+                                  target: LinkTarget.self,
+                                  uri: Uri.parse('https://www.youtube.com/channel/UCsrZEiUoR823FwxxURFknnw'),
+                                  builder: (context, followLink) => CustomSignInButton(
+                                    onPressed: followLink,
+                                    splashColor: Colors.red,
+                                    customIcon: FontAwesomeIcons.youtube,
+                                    iconColor: Colors.white,
+                                    buttonColor: Colors.black87,
+                                    mini: true,
+                                  ),
                                 ),
                               ),
-                            ),
 
-                            SizedBox(width: 5.0),
-                            Container(
-                              child: Link(
-                                target: LinkTarget.self,
-                                uri: Uri.parse('https://www.facebook.com/profile.php?id=100094452325336'),
-                                builder: (context, followLink) => SignInButton(
-                                  onPressed: followLink,
-                                  splashColor: Colors.red,
-                                  button: Button.Facebook,
-                                  mini: true,
+                              SizedBox(width: 10.0),
+                              Container(
+                                child: Link(
+                                  target: LinkTarget.self,
+                                  uri: Uri.parse('https://www.facebook.com/profile.php?id=100094452325336'),
+                                  builder: (context, followLink) => CustomSignInButton(
+                                    onPressed: followLink,
+                                    splashColor: Colors.red,
+                                    customIcon: FontAwesomeIcons.facebookF,
+                                    iconColor: Colors.white,
+                                    buttonColor: Colors.black87,
+                                    mini: true,
+                                  ),
                                 ),
                               ),
-                            ),
 
-                            SizedBox(width: 5.0),
-                            Container(
-                              child: Link(
-                                target: LinkTarget.self,
-                                uri: Uri.parse('https://www.instagram.com/rakibhasan3948/'),
-                                builder: (context, followLink) => SignInButton(
-                                  onPressed: followLink,
-                                  splashColor: Colors.red,
-                                  button: Button.InstagramGradient,
-                                  mini: true,
+                              SizedBox(width: 10.0),
+                              Container(
+                                child: Link(
+                                  target: LinkTarget.self,
+                                  uri: Uri.parse('https://www.instagram.com/rakibhasan3948/'),
+                                  builder: (context, followLink) => CustomSignInButton(
+                                    onPressed: followLink,
+                                    splashColor: Colors.red,
+                                    customIcon: FontAwesomeIcons.instagram,
+                                    iconColor: Colors.white,
+                                    buttonColor: Colors.black87,
+                                    mini: true,
+                                  ),
                                 ),
                               ),
-                            ),
 
 
 
-                          ],
+                            ],
+                          ),
                         ),
                       )
 

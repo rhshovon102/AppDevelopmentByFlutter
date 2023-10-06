@@ -29,25 +29,31 @@ class _aboutState extends State<about> {
                   Divider(thickness: 5,color: Colors.red),
 
 
-                  CarouselSlider(
-                      items: [
-                        Image(image: AssetImage('images/rakib4.jpg')),
-                        Image(image: AssetImage('images/rakib5.jpg')),
-                        Image(image: AssetImage('images/rakib6.jpg')),
-                        Image(image: AssetImage('images/rakib7.jpg')),
-                        Image(image: AssetImage('images/rakib8.jpg')),
-                        Image(image: AssetImage('images/rakib9.jpg')),
-                        Image(image: AssetImage('images/rakib10.jpg')),
-                        Image(image: AssetImage('images/rakib11.jpg')),
-                      ],
-                      options: CarouselOptions(
-                        height: 400,
-                        autoPlay: true,
-                        enlargeCenterPage: true,
-                        viewportFraction: 0.9,
-                        aspectRatio: 2.0,
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Expanded(
+                      child: CarouselSlider(
+                          items: [
+                            Expanded(child: Image(image: AssetImage('images/rakib4.jpg'))),
+                            Expanded(child: Image(image: AssetImage('images/rakib5.jpg'))),
+                            Expanded(child: Image(image: AssetImage('images/rakib6.jpg'))),
+                            Expanded(child: Image(image: AssetImage('images/rakib7.jpg'))),
+                            Expanded(child: Image(image: AssetImage('images/rakib8.jpg'))),
+                            Expanded(child: Image(image: AssetImage('images/rakib9.jpg'))),
+                            Expanded(child: Image(image: AssetImage('images/rakib10.jpg'))),
+                            Expanded(child: Image(image: AssetImage('images/rakib11.jpg'))),
+                          ],
+                          options: CarouselOptions(
+                            //For Phone turn on height
+                            //height: 300,
+                            autoPlay: true,
+                            enlargeCenterPage: true,
+                            viewportFraction: 0.9,
+                            aspectRatio: 2.0,
 
-                      )
+                          )
+                      ),
+                    ),
                   ),
 
 

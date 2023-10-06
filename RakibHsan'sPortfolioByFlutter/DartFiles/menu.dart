@@ -1,4 +1,3 @@
-import 'package:custom_signin_buttons/custom_signin_buttons.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:rakibhasan/academic.dart';
@@ -62,7 +61,7 @@ class _menuState extends State<menu> {
 
 
           ListTile(
-            leading: Icon(FontAwesomeIcons.userGraduate,color: Colors.red,size: 40,),
+            leading: Icon(Icons.school_outlined ,color: Colors.red,size: 40,),
             title: Text("Academic",style: TextStyle(fontSize: 18)),
             onTap: (){
               Navigator.push(

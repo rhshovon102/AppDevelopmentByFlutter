@@ -41,8 +41,8 @@ class _projectState extends State<project> {
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                             children: <Widget>[
-                              Image(image: AssetImage('images/options.png'),height: 100,width: 100,),
-                              Image(image: AssetImage('images/calculator.png'),height: 130,width: 130,),
+                              Expanded(child: Image(image: AssetImage('images/options.png'),height: 130,width: 130,)),
+                              Expanded(child: Image(image: AssetImage('images/calculator.png'),height: 130,width: 130,)),
                             ],
 
                           ),
@@ -52,31 +52,35 @@ class _projectState extends State<project> {
                           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           children: <Widget>[
                            // SizedBox(width: 15),
-                            ElevatedButton(
-                                style: ButtonStyle(
-                                    backgroundColor: MaterialStatePropertyAll<Color>(Colors.red)
-                                ),
-                                onPressed:(){
-                                  Navigator.push(
-                                      context,
-                                      MaterialPageRoute(builder: (context) => quiz_app())
-                                  );
-                                },
-                                child: Text("Quiz App")
+                            Expanded(
+                              child: ElevatedButton(
+                                  style: ButtonStyle(
+                                      backgroundColor: MaterialStatePropertyAll<Color>(Colors.red)
+                                  ),
+                                  onPressed:(){
+                                    Navigator.push(
+                                        context,
+                                        MaterialPageRoute(builder: (context) => quiz_app())
+                                    );
+                                  },
+                                  child: Text("Quiz App")
+                              ),
                             ),
 
-                            //SizedBox(width: 175),
-                            ElevatedButton(
-                                style: ButtonStyle(
-                                    backgroundColor: MaterialStatePropertyAll<Color>(Colors.red)
-                                ),
-                                onPressed:(){
-                                  Navigator.push(
-                                      context,
-                                      MaterialPageRoute(builder: (context) => calculator())
-                                  );
-                                },
-                                child: Text("Calculator")
+                            SizedBox(width: 5,),
+                            Expanded(
+                              child: ElevatedButton(
+                                  style: ButtonStyle(
+                                      backgroundColor: MaterialStatePropertyAll<Color>(Colors.red)
+                                  ),
+                                  onPressed:(){
+                                    Navigator.push(
+                                        context,
+                                        MaterialPageRoute(builder: (context) => calculator())
+                                    );
+                                  },
+                                  child: Text("Calculator")
+                              ),
                             ),
                           ],
 
@@ -89,8 +93,8 @@ class _projectState extends State<project> {
                           padding: const EdgeInsets.all(8.0),
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceEvenly,                            children: <Widget>[
-                              Image(image: AssetImage('images/voice-assistant.png'),height: 130,width: 130,),
-                              Image(image: AssetImage('images/fast-food.png'),height: 130,width: 130),
+                              Expanded(child: Image(image: AssetImage('images/voice-assistant.png'),height: 130,width: 130,)),
+                              Expanded(child: Image(image: AssetImage('images/fast-food.png'),height: 130,width: 130)),
                             ],
 
                           ),
@@ -100,31 +104,35 @@ class _projectState extends State<project> {
                           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           children: <Widget>[
                             //SizedBox(width: 15),
-                            ElevatedButton(
-                                style: ButtonStyle(
-                                    backgroundColor: MaterialStatePropertyAll<Color>(Colors.red)
-                                ),
-                                onPressed:(){
-                                  Navigator.push(
-                                      context,
-                                      MaterialPageRoute(builder: (context) => voice_assistant())
-                                  );
-                                },
-                                child: Text("Voice Assistant")
+                            Expanded(
+                              child: ElevatedButton(
+                                  style: ButtonStyle(
+                                      backgroundColor: MaterialStatePropertyAll<Color>(Colors.red)
+                                  ),
+                                  onPressed:(){
+                                    Navigator.push(
+                                        context,
+                                        MaterialPageRoute(builder: (context) => voice_assistant())
+                                    );
+                                  },
+                                  child: Text("Voice Assistant")
+                              ),
                             ),
 
-                            //SizedBox(width: 90),
-                            ElevatedButton(
-                                style: ButtonStyle(
-                                    backgroundColor: MaterialStatePropertyAll<Color>(Colors.red)
-                                ),
-                                onPressed:(){
-                                  Navigator.push(
-                                      context,
-                                      MaterialPageRoute(builder: (context) => resturant_management_system())
-                                  );
-                                },
-                                child: Text("Resturant Management")
+                            SizedBox(width: 5,),
+                            Expanded(
+                              child: ElevatedButton(
+                                  style: ButtonStyle(
+                                      backgroundColor: MaterialStatePropertyAll<Color>(Colors.red)
+                                  ),
+                                  onPressed:(){
+                                    Navigator.push(
+                                        context,
+                                        MaterialPageRoute(builder: (context) => resturant_management_system())
+                                    );
+                                  },
+                                  child: Text("Resturant Management")
+                              ),
                             ),
                           ],
 
@@ -138,8 +146,8 @@ class _projectState extends State<project> {
                           padding: const EdgeInsets.all(8.0),
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceEvenly,                            children: <Widget>[
-                              Image(image: AssetImage('images/project.png'),height: 130,width: 130),
-                              Image(image: AssetImage('images/blood-bag.png'),height: 130,width: 130),
+                              Expanded(child: Image(image: AssetImage('images/project.png'),height: 130,width: 130)),
+                              Expanded(child: Image(image: AssetImage('images/blood-bag.png'),height: 130,width: 130)),
                             ],
 
                           ),
@@ -149,31 +157,35 @@ class _projectState extends State<project> {
                           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           children: <Widget>[
                             //SizedBox(width: 10),
-                            ElevatedButton(
-                                style: ButtonStyle(
-                                    backgroundColor: MaterialStatePropertyAll<Color>(Colors.red)
-                                ),
-                                onPressed:(){
-                                  Navigator.push(
-                                      context,
-                                      MaterialPageRoute(builder: (context) => schedule_management_system())
-                                  );
-                                },
-                                child: Text("Schedule Management")
+                            Expanded(
+                              child: ElevatedButton(
+                                  style: ButtonStyle(
+                                      backgroundColor: MaterialStatePropertyAll<Color>(Colors.red)
+                                  ),
+                                  onPressed:(){
+                                    Navigator.push(
+                                        context,
+                                        MaterialPageRoute(builder: (context) => schedule_management_system())
+                                    );
+                                  },
+                                  child: Text("Schedule Management")
+                              ),
                             ),
 
-                            //SizedBox(width: 75),
-                            ElevatedButton(
-                                style: ButtonStyle(
-                                    backgroundColor: MaterialStatePropertyAll<Color>(Colors.red)
-                                ),
-                                onPressed:(){
-                                  Navigator.push(
-                                      context,
-                                      MaterialPageRoute(builder: (context) => blood_bank_management_system())
-                                  );
-                                },
-                                child: Text("Blood Management")
+                            SizedBox(width: 5,),
+                            Expanded(
+                              child: ElevatedButton(
+                                  style: ButtonStyle(
+                                      backgroundColor: MaterialStatePropertyAll<Color>(Colors.red)
+                                  ),
+                                  onPressed:(){
+                                    Navigator.push(
+                                        context,
+                                        MaterialPageRoute(builder: (context) => blood_bank_management_system())
+                                    );
+                                  },
+                                  child: Text("Blood Management")
+                              ),
                             ),
                           ],
 
@@ -186,8 +198,8 @@ class _projectState extends State<project> {
                           padding: const EdgeInsets.all(8.0),
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceEvenly,                            children: <Widget>[
-                              Image(image: AssetImage('images/drone.png'),height: 130,width: 130),
-                              Image(image: AssetImage('images/ebook.png'),height: 130,width: 130),
+                              Expanded(child: Image(image: AssetImage('images/drone.png'),height: 130,width: 130)),
+                              Expanded(child: Image(image: AssetImage('images/ebook.png'),height: 130,width: 130)),
                             ],
 
                           ),
@@ -197,31 +209,35 @@ class _projectState extends State<project> {
                           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           children: <Widget>[
                             //SizedBox(width: 33),
-                            ElevatedButton(
-                                style: ButtonStyle(
-                                    backgroundColor: MaterialStatePropertyAll<Color>(Colors.red)
-                                ),
-                                onPressed:(){
-                                  Navigator.push(
-                                      context,
-                                      MaterialPageRoute(builder: (context) => uraow())
-                                  );
-                                },
-                                child: Text("URAOW")
+                            Expanded(
+                              child: ElevatedButton(
+                                  style: ButtonStyle(
+                                      backgroundColor: MaterialStatePropertyAll<Color>(Colors.red)
+                                  ),
+                                  onPressed:(){
+                                    Navigator.push(
+                                        context,
+                                        MaterialPageRoute(builder: (context) => uraow())
+                                    );
+                                  },
+                                  child: Text("URAOW")
+                              ),
                             ),
 
-                            //SizedBox(width: 130),
-                            ElevatedButton(
-                                style: ButtonStyle(
-                                    backgroundColor: MaterialStatePropertyAll<Color>(Colors.red)
-                                ),
-                                onPressed:(){
-                                  Navigator.push(
-                                      context,
-                                      MaterialPageRoute(builder: (context) => library_management_system())
-                                  );
-                                },
-                                child: Text("Library Management")
+                            SizedBox(width: 5,),
+                            Expanded(
+                              child: ElevatedButton(
+                                  style: ButtonStyle(
+                                      backgroundColor: MaterialStatePropertyAll<Color>(Colors.red)
+                                  ),
+                                  onPressed:(){
+                                    Navigator.push(
+                                        context,
+                                        MaterialPageRoute(builder: (context) => library_management_system())
+                                    );
+                                  },
+                                  child: Text("Library Management")
+                              ),
                             ),
                           ],
 
@@ -234,8 +250,8 @@ class _projectState extends State<project> {
                           padding: const EdgeInsets.all(8.0),
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceEvenly,                            children: <Widget>[
-                              Image(image: AssetImage('images/fire.png'),height: 130,width: 130),
-                              Image(image: AssetImage('images/hospital.png'),height: 130,width: 130),
+                              Expanded(child: Image(image: AssetImage('images/fire.png'),height: 130,width: 130)),
+                              Expanded(child: Image(image: AssetImage('images/hospital.png'),height: 130,width: 130)),
                             ],
 
                           ),
@@ -246,31 +262,35 @@ class _projectState extends State<project> {
                           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           children: <Widget>[
                             //SizedBox(width: 20),
-                            ElevatedButton(
-                                style: ButtonStyle(
-                                    backgroundColor: MaterialStatePropertyAll<Color>(Colors.red)
-                                ),
-                                onPressed:(){
-                                  Navigator.push(
-                                      context,
-                                      MaterialPageRoute(builder: (context) => fire_detector())
-                                  );
-                                },
-                                child: Text("Fire Detector")
+                            Expanded(
+                              child: ElevatedButton(
+                                  style: ButtonStyle(
+                                      backgroundColor: MaterialStatePropertyAll<Color>(Colors.red)
+                                  ),
+                                  onPressed:(){
+                                    Navigator.push(
+                                        context,
+                                        MaterialPageRoute(builder: (context) => fire_detector())
+                                    );
+                                  },
+                                  child: Text("Fire Detector")
+                              ),
                             ),
 
-                            //SizedBox(width: 110),
-                            ElevatedButton(
-                                style: ButtonStyle(
-                                    backgroundColor: MaterialStatePropertyAll<Color>(Colors.red)
-                                ),
-                                onPressed:(){
-                                  Navigator.push(
-                                      context,
-                                      MaterialPageRoute(builder: (context) => student_management_system())
-                                  );
-                                },
-                                child: Text("Student Management")
+                            SizedBox(width: 5,),
+                            Expanded(
+                              child: ElevatedButton(
+                                  style: ButtonStyle(
+                                      backgroundColor: MaterialStatePropertyAll<Color>(Colors.red)
+                                  ),
+                                  onPressed:(){
+                                    Navigator.push(
+                                        context,
+                                        MaterialPageRoute(builder: (context) => student_management_system())
+                                    );
+                                  },
+                                  child: Text("Student Management")
+                              ),
                             ),
                           ],
 
