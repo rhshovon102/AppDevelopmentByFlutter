@@ -43,7 +43,7 @@ class _collegeState extends State<college> {
                                 ],
                                 options: CarouselOptions(
                                   //For Phone turn on height
-                                  //height: 300,
+                                  height: 300,
                                   autoPlay: true,
                                   enlargeCenterPage: true,
                                   viewportFraction: 0.9,

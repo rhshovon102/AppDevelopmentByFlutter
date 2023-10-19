@@ -52,7 +52,7 @@ class _photographyState extends State<photography> {
                                 ],
                                 options: CarouselOptions(
                                   //For Phone turn on height
-                                  //height: 400,
+                                  height: 400,
                                   autoPlay: true,
                                   enlargeCenterPage: true,
                                   viewportFraction: 0.9,

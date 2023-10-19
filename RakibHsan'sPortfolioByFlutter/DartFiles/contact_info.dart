@@ -30,12 +30,12 @@ class _contact_infoState extends State<contact_info> {
                     children: [
 
                       SizedBox(height: 10),
-                      Image(image: AssetImage('images/rakib.png'),height: 300,width: 300),
+                      Image(image: AssetImage('images/rakib.png'),height: 290,width: 290),
 
                       SizedBox(height: 20),
                       Text("RAKIB HASAN",style: TextStyle(fontSize: 40,fontWeight: FontWeight.bold,fontFamily: 'Aclonica',color: Colors.black87)),
 
-                      SizedBox(height: 10),
+                      SizedBox(height: 2),
                       Divider(thickness: 5,color: Colors.red),
                       SizedBox(height: 20),
 
@@ -144,8 +144,8 @@ class _contact_infoState extends State<contact_info> {
                       Divider(thickness: 5,color: Colors.red),
 
 
-                      SizedBox(height: 7),
-                      Center(child: Text("Follow Me",style: TextStyle(fontSize: 25,fontWeight: FontWeight.bold, fontFamily: 'Aclonica',color: Colors.black87))),
+                      SizedBox(height: 5),
+                      Center(child: Text("Knock Me",style: TextStyle(fontSize: 25,fontWeight: FontWeight.bold, fontFamily: 'Aclonica',color: Colors.black87))),
 
                       SizedBox(height: 5,),
                       Padding(
