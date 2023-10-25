@@ -20,6 +20,7 @@ class _CalculatorState extends State<Calculator> {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
+      theme: ThemeData(fontFamily: 'Almendra'),
 
       home: home(),
 

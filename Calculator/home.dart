@@ -17,7 +17,8 @@ class _homeState extends State<home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: CupertinoColors.systemGrey4,
+      backgroundColor: Colors.black,
+
 
       appBar: AppBar(title: Center(child: Text("CALCULATOR",style: TextStyle(fontSize: 65,fontWeight: FontWeight.bold))),backgroundColor: Colors.purple),
 
@@ -87,6 +88,7 @@ class _homeState extends State<home> {
                           ),
                           onPressed: (){
                             setState(() {
+                              input = input + '%';
                               value1 = double.parse(value);
                               value = '';
                               result = value1 / 100;
