@@ -28,7 +28,7 @@ class _q5State extends State<q5> {
                 Expanded(
                   child: Center(
                     child: Container(
-                      child: Text("What is favorite pastime of the developer?", style: TextStyle(fontSize: 30),textAlign: TextAlign.center),
+                      child: Text("What type of test can examine your code as a complete system?", style: TextStyle(fontSize: 30),textAlign: TextAlign.center),
                     ),
                   ),
                 ),
@@ -41,11 +41,11 @@ class _q5State extends State<q5> {
                           Expanded(
                             child: ElevatedButton(
                                 style: ButtonStyle(
-                                    backgroundColor: MaterialStatePropertyAll<Color>(Colors.redAccent)
+                                    backgroundColor: MaterialStatePropertyAll<Color>(Colors.white)
                                 ),
                                 onPressed: (){
                                   flag = 1;
-                                }, child: Text("Photography",style: TextStyle(fontSize: 20),)),
+                                }, child: Text("Integration Tests",style: TextStyle(fontSize: 20,color: Colors.black),)),
                           )
                         ],
                       ),
@@ -54,12 +54,12 @@ class _q5State extends State<q5> {
                           Expanded(
                             child: ElevatedButton(
                                 style: ButtonStyle(
-                                    backgroundColor: MaterialStatePropertyAll<Color>(Colors.redAccent)
+                                    backgroundColor: MaterialStatePropertyAll<Color>(Colors.white)
                                 ),
                                 onPressed: (){
                                   flag = 0;
                                 },
-                                child: Text("Coding",style: TextStyle(fontSize: 20),)),
+                                child: Text("Unit Tests",style: TextStyle(fontSize: 20,color: Colors.black),)),
                           )
                         ],
                       ),
@@ -68,12 +68,12 @@ class _q5State extends State<q5> {
                           Expanded(
                             child: ElevatedButton(
                                 style: ButtonStyle(
-                                    backgroundColor: MaterialStatePropertyAll<Color>(Colors.redAccent)
+                                    backgroundColor: MaterialStatePropertyAll<Color>(Colors.white)
                                 ),
                                 onPressed: (){
                                   flag = 0;
                                 },
-                                child: Text("Cycling",style: TextStyle(fontSize: 20),)),
+                                child: Text("Widget tests",style: TextStyle(fontSize: 20,color: Colors.black),)),
                           )
                         ],
                       ),
@@ -82,11 +82,11 @@ class _q5State extends State<q5> {
                           Expanded(
                             child: ElevatedButton(
                                 style: ButtonStyle(
-                                    backgroundColor: MaterialStatePropertyAll<Color>(Colors.redAccent)
+                                    backgroundColor: MaterialStatePropertyAll<Color>(Colors.white)
                                 ),
                                 onPressed: (){
                                   flag = 0;
-                                }, child: Text("Watching Movies",style: TextStyle(fontSize: 20),)),
+                                }, child: Text(" Unit tests",style: TextStyle(fontSize: 20,color: Colors.black),)),
                           )
                         ],
                       ),
@@ -98,10 +98,11 @@ class _q5State extends State<q5> {
                     Expanded(
                       child: ElevatedButton(
                           style: ButtonStyle(
-                              backgroundColor: MaterialStatePropertyAll<Color>(Colors.lightGreen)
+                              backgroundColor: MaterialStatePropertyAll<Color>(CupertinoColors.systemYellow)
                           ),
                           onPressed: (){
                             if (flag == 1){
+                              flag = 0;
                               count = count + 1;
                               Navigator.push(
                                   context,
@@ -115,11 +116,12 @@ class _q5State extends State<q5> {
                               );
                             }
 
-                          }, child: Text("SUBMIT",style: TextStyle(fontSize: 30),)),
+                          }, child: Text("Finish",style: TextStyle(fontSize: 30),)),
                     )
                   ],
                 ),
 
+                SizedBox(height: 10)
 
 
 

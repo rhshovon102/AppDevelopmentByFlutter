@@ -45,11 +45,12 @@ class _homeState extends State<home> {
                                 MaterialPageRoute(builder: (context) => q1())
                             );
                           },
-                          child: Text("Start",style: TextStyle(fontSize: 40)))
+                          child: Text("Start",style: TextStyle(fontSize: 40,fontWeight: FontWeight.bold)))
                     )
                   ],
-                )
+                ),
 
+                SizedBox(height: 10)
 
               ],
               

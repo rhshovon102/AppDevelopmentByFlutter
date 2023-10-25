@@ -27,7 +27,7 @@ class _q3State extends State<q3> {
                 Expanded(
                   child: Center(
                     child: Container(
-                      child: Text("Currently he is pursuing a _____ degree?", style: TextStyle(fontSize: 30),textAlign: TextAlign.center),
+                      child: Text("How many types of widgets are there in Flutter?", style: TextStyle(fontSize: 30),textAlign: TextAlign.center),
                     ),
                   ),
                 ),
@@ -40,25 +40,39 @@ class _q3State extends State<q3> {
                           Expanded(
                             child: ElevatedButton(
                                 style: ButtonStyle(
-                                    backgroundColor: MaterialStatePropertyAll<Color>(Colors.redAccent)
+                                    backgroundColor: MaterialStatePropertyAll<Color>(Colors.white)
+                                ),
+                                onPressed: (){
+                                  flag = 0;
+                                }, child: Text("8",style: TextStyle(fontSize: 20,color: Colors.black),)),
+                          )
+                        ],
+                      ),
+                      Row(
+                        children: [
+                          Expanded(
+                            child: ElevatedButton(
+                                style: ButtonStyle(
+                                    backgroundColor: MaterialStatePropertyAll<Color>(Colors.white)
+                                ),
+                                onPressed: (){
+                                  flag = 0;
+                                },
+                                child: Text("6",style: TextStyle(fontSize: 20,color: Colors.black),)),
+                          )
+                        ],
+                      ),
+                      Row(
+                        children: [
+                          Expanded(
+                            child: ElevatedButton(
+                                style: ButtonStyle(
+                                    backgroundColor: MaterialStatePropertyAll<Color>(Colors.white)
                                 ),
                                 onPressed: (){
                                   flag = 1;
-                                }, child: Text("B.Sc",style: TextStyle(fontSize: 20),)),
-                          )
-                        ],
-                      ),
-                      Row(
-                        children: [
-                          Expanded(
-                            child: ElevatedButton(
-                                style: ButtonStyle(
-                                    backgroundColor: MaterialStatePropertyAll<Color>(Colors.redAccent)
-                                ),
-                                onPressed: (){
-                                  flag = 0;
                                 },
-                                child: Text("M.Sc",style: TextStyle(fontSize: 20),)),
+                                child: Text("2",style: TextStyle(fontSize: 20,color: Colors.black),)),
                           )
                         ],
                       ),
@@ -67,25 +81,11 @@ class _q3State extends State<q3> {
                           Expanded(
                             child: ElevatedButton(
                                 style: ButtonStyle(
-                                    backgroundColor: MaterialStatePropertyAll<Color>(Colors.redAccent)
+                                    backgroundColor: MaterialStatePropertyAll<Color>(Colors.white)
                                 ),
                                 onPressed: (){
                                   flag = 0;
-                                },
-                                child: Text("H.S.C",style: TextStyle(fontSize: 20),)),
-                          )
-                        ],
-                      ),
-                      Row(
-                        children: [
-                          Expanded(
-                            child: ElevatedButton(
-                                style: ButtonStyle(
-                                    backgroundColor: MaterialStatePropertyAll<Color>(Colors.redAccent)
-                                ),
-                                onPressed: (){
-                                  flag = 0;
-                                }, child: Text("S.S.C",style: TextStyle(fontSize: 20),)),
+                                }, child: Text("4",style: TextStyle(fontSize: 20,color: Colors.black),)),
                           )
                         ],
                       ),
@@ -99,10 +99,11 @@ class _q3State extends State<q3> {
                     Expanded(
                       child: ElevatedButton(
                           style: ButtonStyle(
-                              backgroundColor: MaterialStatePropertyAll<Color>(Colors.lightGreen)
+                              backgroundColor: MaterialStatePropertyAll<Color>(CupertinoColors.systemYellow)
                           ),
                           onPressed: (){
                             if (flag == 1){
+                              flag = 0;
                               count = count + 1;
                               Navigator.push(
                                   context,
@@ -116,10 +117,13 @@ class _q3State extends State<q3> {
                               );
                             }
 
-                          }, child: Text("SUBMIT",style: TextStyle(fontSize: 30),)),
+                          }, child: Text("Next",style: TextStyle(fontSize: 30),)),
                     )
                   ],
                 ),
+
+
+                SizedBox(height: 10)
 
               ],
 

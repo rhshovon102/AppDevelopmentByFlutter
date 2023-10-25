@@ -27,7 +27,7 @@ class _q4State extends State<q4> {
                 Expanded(
                   child: Center(
                     child: Container(
-                      child: Text("Where was he born?", style: TextStyle(fontSize: 30),textAlign: TextAlign.center),
+                      child: Text("Access to a cloud database through Flutter is available through which service?", style: TextStyle(fontSize: 30),textAlign: TextAlign.center),
                     ),
                   ),
                 ),
@@ -40,52 +40,52 @@ class _q4State extends State<q4> {
                           Expanded(
                             child: ElevatedButton(
                                 style: ButtonStyle(
-                                    backgroundColor: MaterialStatePropertyAll<Color>(Colors.redAccent)
+                                    backgroundColor: MaterialStatePropertyAll<Color>(Colors.white)
+                                ),
+                                onPressed: (){
+                                  flag = 0;
+                                }, child: Text("SQLite",style: TextStyle(fontSize: 20,color: Colors.black),)),
+                          )
+                        ],
+                      ),
+                      Row(
+                        children: [
+                          Expanded(
+                            child: ElevatedButton(
+                                style: ButtonStyle(
+                                    backgroundColor: MaterialStatePropertyAll<Color>(Colors.white)
+                                ),
+                                onPressed: (){
+                                  flag = 0;
+                                },
+                                child: Text("NOSQL",style: TextStyle(fontSize: 20,color: Colors.black),)),
+                          )
+                        ],
+                      ),
+                      Row(
+                        children: [
+                          Expanded(
+                            child: ElevatedButton(
+                                style: ButtonStyle(
+                                    backgroundColor: MaterialStatePropertyAll<Color>(Colors.white)
+                                ),
+                                onPressed: (){
+                                  flag = 0;
+                                },
+                                child: Text("MYSQL",style: TextStyle(fontSize: 20,color: Colors.black),)),
+                          )
+                        ],
+                      ),
+                      Row(
+                        children: [
+                          Expanded(
+                            child: ElevatedButton(
+                                style: ButtonStyle(
+                                    backgroundColor: MaterialStatePropertyAll<Color>(Colors.white)
                                 ),
                                 onPressed: (){
                                   flag = 1;
-                                }, child: Text("Madaripur",style: TextStyle(fontSize: 20),)),
-                          )
-                        ],
-                      ),
-                      Row(
-                        children: [
-                          Expanded(
-                            child: ElevatedButton(
-                                style: ButtonStyle(
-                                    backgroundColor: MaterialStatePropertyAll<Color>(Colors.redAccent)
-                                ),
-                                onPressed: (){
-                                  flag = 0;
-                                },
-                                child: Text("Dhaka",style: TextStyle(fontSize: 20),)),
-                          )
-                        ],
-                      ),
-                      Row(
-                        children: [
-                          Expanded(
-                            child: ElevatedButton(
-                                style: ButtonStyle(
-                                    backgroundColor: MaterialStatePropertyAll<Color>(Colors.redAccent)
-                                ),
-                                onPressed: (){
-                                  flag = 0;
-                                },
-                                child: Text("Gazipur",style: TextStyle(fontSize: 20),)),
-                          )
-                        ],
-                      ),
-                      Row(
-                        children: [
-                          Expanded(
-                            child: ElevatedButton(
-                                style: ButtonStyle(
-                                    backgroundColor: MaterialStatePropertyAll<Color>(Colors.redAccent)
-                                ),
-                                onPressed: (){
-                                  flag = 0;
-                                }, child: Text("Shariatpur",style: TextStyle(fontSize: 20),)),
+                                }, child: Text("Firebase Database",style: TextStyle(fontSize: 20,color: Colors.black),)),
                           )
                         ],
                       ),
@@ -99,10 +99,11 @@ class _q4State extends State<q4> {
                     Expanded(
                       child: ElevatedButton(
                           style: ButtonStyle(
-                              backgroundColor: MaterialStatePropertyAll<Color>(Colors.lightGreen)
+                              backgroundColor: MaterialStatePropertyAll<Color>(CupertinoColors.systemYellow)
                           ),
                           onPressed: (){
                             if (flag == 1){
+                              flag = 0;
                               count = count + 1;
                               Navigator.push(
                                   context,
@@ -116,12 +117,12 @@ class _q4State extends State<q4> {
                               );
                             }
 
-                          }, child: Text("SUBMIT",style: TextStyle(fontSize: 30),)),
+                          }, child: Text("Next",style: TextStyle(fontSize: 30),)),
                     )
                   ],
                 ),
 
-
+                SizedBox(height: 10)
 
 
               ],

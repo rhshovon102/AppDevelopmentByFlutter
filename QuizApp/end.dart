@@ -12,6 +12,7 @@ class end extends StatefulWidget {
 }
 
 class _endState extends State<end> {
+  double percentage = count/5*100;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -25,14 +26,44 @@ class _endState extends State<end> {
 
               children: [
 
-                SizedBox(height: 100,),
-                Expanded(
-                  child: Container(
-                    child: Text("You Got $count out of 5",style: TextStyle(fontSize: 50),textAlign: TextAlign.center),
-                  ),
+                SizedBox(height: 150),
+
+
+                Text("Your Score",style: TextStyle(fontSize: 40,fontWeight: FontWeight.bold)),
+                SizedBox(height: 50),
+
+
+                Stack(
+                  alignment: Alignment.center,
+                  children: [
+
+                    SizedBox(
+                      height: 250,
+                      width: 250,
+                      child: CircularProgressIndicator(
+
+                        strokeWidth: 12,
+                        color: Colors.yellow,
+                        backgroundColor: Colors.white,
+
+                      ),
+                    ),
+
+                    Center(
+                      child: Column(
+                        children: [
+                          Text("$count/5",style: TextStyle(fontSize: 90,fontWeight: FontWeight.bold)),
+                          Text("$percentage%",style: TextStyle(fontSize: 30,fontWeight: FontWeight.bold))
+                        ],
+                      ),
+                    )
+
+                  ],
                 ),
 
 
+                Expanded(child: SizedBox()),
+                
                 Row(
                   children: [
                     Expanded(
@@ -48,10 +79,13 @@ class _endState extends State<end> {
                                 MaterialPageRoute(builder: (context) => q1())
                             );
                           },
-                          child: Text("Restart",style: TextStyle(fontSize: 40))),
+                          child: Text("Restart",style: TextStyle(fontSize: 40,fontWeight: FontWeight.bold))),
                     )
                   ],
-                )
+                ),
+
+                SizedBox(height: 10)
+
 
 
               ],
