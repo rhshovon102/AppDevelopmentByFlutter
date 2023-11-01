@@ -1,3 +1,4 @@
+import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 
@@ -36,7 +37,144 @@ class _homeState extends State<home> {
                 ),
               ),
 
+              Row(
+                children: [
+                  Expanded(
+                    child: SizedBox(
+                      height: 40,
+                      width: 70,
+                      child: ElevatedButton(
+                          style: ButtonStyle(
+                              backgroundColor: MaterialStatePropertyAll<Color>(Colors.purple)
+                          ),
+                          onPressed: (){
+                            flag = 10;
+                            setState(() {
+                              input = input + 'log';
+                            });
+                          },
+                          child: Text("log",style: TextStyle(fontSize: 30))),
+                    ),
+                  ),
+                  SizedBox(width: 5),
+                  Expanded(
+                    child: SizedBox(
+                      height: 40,
+                      width: 70,
+                      child: ElevatedButton(
+                          style: ButtonStyle(
+                              backgroundColor: MaterialStatePropertyAll<Color>(Colors.purple)
+                          ),
+                          onPressed: (){
+                            flag = 11;
+                            setState(() {
+                              input = input + 'ln';
+                            });
+                          },
+                          child: Text("ln",style: TextStyle(fontSize: 30))),
+                    ),
+                  ),
+                  SizedBox(width: 5),
+                  Expanded(
+                    child: SizedBox(
 
+                      height: 40,
+                      width: 70,
+                      child: ElevatedButton(
+                          style: ButtonStyle(
+                              backgroundColor: MaterialStatePropertyAll<Color>(Colors.purple)
+                          ),
+                          onPressed: (){
+                            flag = 12;
+                            setState(() {
+                              input = input + '^';
+                              value1 = double.parse(value);
+                              value = '';
+                            });
+                          },
+                          child: Text("^",style: TextStyle(fontSize: 30))),
+                    ),
+                  ),
+                ],
+              ),
+              SizedBox(height: 5),
+              Row(
+                children: [
+                  Expanded(
+                    child: SizedBox(
+                      height: 40,
+                      width: 70,
+                      child: ElevatedButton(
+                          style: ButtonStyle(
+                              backgroundColor: MaterialStatePropertyAll<Color>(Colors.purple)
+                          ),
+                          onPressed: (){
+                            flag = 6;
+                            setState(() {
+                              input = input + 'sin';
+                            });
+                          },
+                          child: Text("sin",style: TextStyle(fontSize: 30))),
+                    ),
+                  ),
+                  SizedBox(width: 5),
+                  Expanded(
+                    child: SizedBox(
+                      height: 40,
+                      width: 70,
+                      child: ElevatedButton(
+                          style: ButtonStyle(
+                              backgroundColor: MaterialStatePropertyAll<Color>(Colors.purple)
+                          ),
+                          onPressed: (){
+                            flag = 7;
+                            setState(() {
+                              input = input + 'cos';
+                            });
+                          },
+                          child: Text("cos",style: TextStyle(fontSize: 30))),
+                    ),
+                  ),
+                  SizedBox(width: 5),
+                  Expanded(
+                    child: SizedBox(
+
+                      height: 40,
+                      width: 70,
+                      child: ElevatedButton(
+                          style: ButtonStyle(
+                              backgroundColor: MaterialStatePropertyAll<Color>(Colors.purple)
+                          ),
+                          onPressed: (){
+                            flag = 8;
+                            setState(() {
+                              input = input + 'tan';
+                            });
+                          },
+                          child: Text("tan",style: TextStyle(fontSize: 30))),
+                    ),
+                  ),
+                  SizedBox(width: 5),
+                  Expanded(
+                    child: SizedBox(
+                      height: 40,
+                      width: 70,
+                      child: ElevatedButton(
+                          style: ButtonStyle(
+                              backgroundColor: MaterialStatePropertyAll<Color>(Colors.purple)
+                          ),
+                          onPressed: (){
+                            flag = 9;
+                            setState(() {
+                              input = input + '√';
+                            });
+                          },
+                          child: Text("√",style: TextStyle(fontSize: 30))),
+                    ),
+                  ),
+                ],
+              ),
+              SizedBox(height: 5),
               Row(
                 children: [
                   Expanded(
@@ -443,7 +581,40 @@ class _homeState extends State<home> {
                                   final_result = '= ' + result.toString();
                                 }
 
+                                else if (flag == 6) {
+                                  result = sin(double.parse(value));
+                                  final_result = '= ' + result.toString();
+                                }
 
+                                else if (flag == 7) {
+                                  result = cos(double.parse(value) * pi / 180);
+                                  final_result = '= ' + result.toString();
+                                }
+
+                                else if (flag == 8) {
+                                  result = tan(double.parse(value) * pi / 180);
+                                  final_result = '= ' + result.toString();
+                                }
+
+                                else if (flag == 9) {
+                                  result = sqrt(double.parse(value));
+                                  final_result = '= ' + result.toString();
+                                }
+
+                                else if (flag == 10) {
+                                  result = log(double.parse(value)) / ln10;
+                                  final_result = '= ' + result.toString();
+                                }
+
+                                else if (flag == 11) {
+                                  result = log(double.parse(value));
+                                  final_result = '= ' + result.toString();
+                                }
+
+                                else if (flag == 12) {
+                                  result = pow(value1, double.parse(value)) as double;
+                                  final_result = '= ' + result.toString();
+                                }
 
                             });
                           },
