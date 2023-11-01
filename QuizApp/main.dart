@@ -7,8 +7,7 @@ void main(){
   return runApp(QuizApp());
 }
 
-int count = 0, flag = 0, score = 0,highscore = 0;
-
+int count = 0, score = 0, highscore = 0, index = 0, i = 0;
 
 class QuizApp extends StatefulWidget {
   const QuizApp({super.key});

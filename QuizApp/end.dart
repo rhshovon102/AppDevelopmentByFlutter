@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'main.dart';
-import 'package:qiz_app/q1.dart';
+import 'package:qiz_app/screen_design.dart';
 import 'package:qiz_app/answer.dart';
 
 class end extends StatefulWidget {
@@ -12,7 +12,7 @@ class end extends StatefulWidget {
 }
 
 class _endState extends State<end> {
-  double percentage = count/5*100;
+  double percentage = count/10*100;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -50,7 +50,7 @@ class _endState extends State<end> {
                     Center(
                       child: Column(
                         children: [
-                          Text("$count/5",style: TextStyle(fontSize: 90,fontWeight: FontWeight.bold)),
+                          Text("$count/10",style: TextStyle(fontSize: 90,fontWeight: FontWeight.bold)),
                           Text("$percentage%",style: TextStyle(fontSize: 30,fontWeight: FontWeight.bold)),
                           Text("High Score: "+"$highscore",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold)),
 
@@ -78,7 +78,7 @@ class _endState extends State<end> {
                             );
 
 
-                        }, child: Text("Check Answer",style: TextStyle(fontSize: 30),))
+                        }, child: Text("Quick Recap",style: TextStyle(fontSize: 30),))
                   ],
                 ),
 
@@ -93,7 +93,6 @@ class _endState extends State<end> {
                           backgroundColor: MaterialStatePropertyAll<Color>(CupertinoColors.systemYellow)
                         ),
                           onPressed: (){
-                            flag =0;
                             count = 0;
                             Navigator.push(
                                 context,

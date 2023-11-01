@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:qiz_app/q1.dart';
+import 'package:qiz_app/screen_design.dart';
 
 class home extends StatefulWidget {
   const home({super.key});
