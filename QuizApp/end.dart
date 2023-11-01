@@ -25,12 +25,10 @@ class _endState extends State<end> {
             child: Column(
 
               children: [
+                Text("Your Score",style: TextStyle(fontSize: 50,fontWeight: FontWeight.bold)),
+                Divider(thickness: 5,color: CupertinoColors.systemYellow),
 
                 SizedBox(height: 100),
-
-
-                Text("Your Score",style: TextStyle(fontSize: 40,fontWeight: FontWeight.bold)),
-                SizedBox(height: 50),
 
 
                 Stack(
@@ -42,7 +40,7 @@ class _endState extends State<end> {
                       width: 250,
                       child: CircularProgressIndicator(
 
-                        strokeWidth: 12,
+                        strokeWidth: 15,
                         color: Colors.yellow,
                         backgroundColor: Colors.white,
 
@@ -53,7 +51,9 @@ class _endState extends State<end> {
                       child: Column(
                         children: [
                           Text("$count/5",style: TextStyle(fontSize: 90,fontWeight: FontWeight.bold)),
-                          Text("$percentage%",style: TextStyle(fontSize: 30,fontWeight: FontWeight.bold))
+                          Text("$percentage%",style: TextStyle(fontSize: 30,fontWeight: FontWeight.bold)),
+                          Text("High Score: "+"$highscore",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold)),
+
                         ],
                       ),
                     )
@@ -61,7 +61,7 @@ class _endState extends State<end> {
                   ],
                 ),
 
-                SizedBox(height: 20),
+                SizedBox(height: 40),
 
 
                 Row(

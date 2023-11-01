@@ -104,12 +104,33 @@ class _q5State extends State<q5> {
                             if (flag == 1){
                               flag = 0;
                               count = count + 1;
+                              score = count;
+
+                              if(score>highscore){
+                                highscore = score;
+                              }
+
+                              else{
+                                highscore = highscore;
+                              }
+
+
                               Navigator.push(
                                   context,
                                   MaterialPageRoute(builder: (context) => end())
                               );
                             }
                             else{
+
+                              score = count;
+                              if(score>highscore){
+                                highscore = score;
+                              }
+
+                              else{
+                                highscore = highscore;
+                              }
+
                               Navigator.push(
                                   context,
                                   MaterialPageRoute(builder: (context) => end())
