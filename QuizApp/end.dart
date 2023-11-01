@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'main.dart';
 import 'package:qiz_app/q1.dart';
-
+import 'package:qiz_app/answer.dart';
 
 class end extends StatefulWidget {
   const end({super.key});
@@ -26,7 +26,7 @@ class _endState extends State<end> {
 
               children: [
 
-                SizedBox(height: 150),
+                SizedBox(height: 100),
 
 
                 Text("Your Score",style: TextStyle(fontSize: 40,fontWeight: FontWeight.bold)),
@@ -58,6 +58,27 @@ class _endState extends State<end> {
                       ),
                     )
 
+                  ],
+                ),
+
+                SizedBox(height: 20),
+
+
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    ElevatedButton(
+                        style: ButtonStyle(
+                            backgroundColor: MaterialStatePropertyAll<Color>(CupertinoColors.systemYellow)
+                        ),
+                        onPressed: (){
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(builder: (context) => answer())
+                            );
+
+
+                        }, child: Text("Check Answer",style: TextStyle(fontSize: 30),))
                   ],
                 ),
 
