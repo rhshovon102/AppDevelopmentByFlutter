@@ -27,9 +27,11 @@ class _homeState extends State<home> {
 
                 Expanded(
                   child: Container(
-                    child: Text("WELCOME",style: TextStyle(fontSize: 40,fontWeight: FontWeight.bold)),
+                    child: Text("WELCOME",style: TextStyle(fontSize: 50,fontWeight: FontWeight.bold)),
                   ),
                 ),
+
+
                 
 
                 Row(
@@ -45,11 +47,10 @@ class _homeState extends State<home> {
                                 MaterialPageRoute(builder: (context) => q1())
                             );
                           },
-                          child: Text("Start",style: TextStyle(fontSize: 40,fontWeight: FontWeight.bold)))
+                          child: Text("Start Quiz",style: TextStyle(fontSize: 40,fontWeight: FontWeight.bold)))
                     )
                   ],
                 ),
-
                 SizedBox(height: 10)
 
               ],

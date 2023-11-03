@@ -46,7 +46,7 @@ class _answerState extends State<answer> {
                                     MaterialPageRoute(builder: (context) => end())
                                 );
                               },
-                              child: Text("Back",style: TextStyle(fontSize: 40,fontWeight: FontWeight.bold)))
+                              child: Text("Back",style: TextStyle(fontSize: 30,fontWeight: FontWeight.bold)))
                       )
                     ],
                   ),
