@@ -3,11 +3,11 @@ import 'package:flutter/cupertino.dart';
 import 'package:qiz_app/main.dart';
 import 'package:qiz_app/end.dart';
 import 'package:qiz_app/question_answer_conditions.dart';
+import 'package:qiz_app/calculator.dart';
 import 'dart:async';
 
-
 class q1 extends StatefulWidget {
-  const q1({super.key});
+  const q1({Key? key});
 
   @override
   State<q1> createState() => _q1State();
@@ -17,7 +17,6 @@ class _q1State extends State<q1> {
   int? selectedAnswerIndex;
   int questionIndex = 0;
   int timeLeft = 60; // Initialize the timer with 60 seconds
-
   late Timer _timer; // Declare a timer
 
   @override
@@ -34,6 +33,7 @@ class _q1State extends State<q1> {
         });
       } else {
         timer.cancel();
+        goToNextQuestion(); // Automatically go to the next question when time is up
       }
     });
   }
@@ -55,6 +55,7 @@ class _q1State extends State<q1> {
         questionIndex++; // Move to the next question
         timeLeft = 60; // Reset the timer to 60 seconds
         selectedAnswerIndex = null; // Clear the selected answer
+        startTimer(); // Start the timer for the next question
       }
     });
   }
@@ -142,7 +143,25 @@ class _q1State extends State<q1> {
                   onpressed: selectedAnswerIndex != null ? goToNextQuestion : null,
                   label: 'Next',
                 ),
-                SizedBox(height: 10),
+                SizedBox(),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    ElevatedButton(
+                      style: ButtonStyle(
+                        backgroundColor: MaterialStatePropertyAll<Color>(CupertinoColors.systemYellow),
+                      ),
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => calculator()),
+                        );
+                      },
+                      child: Text("Use Calculator", style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold)),
+                    ),
+                  ],
+                ),
+                SizedBox(),
               ],
             ),
           ),

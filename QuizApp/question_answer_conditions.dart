@@ -22,8 +22,8 @@ List<QuestionModel> questions = [
     correctAnswerIndex: 0, // Dart
   ),
   QuestionModel(
-    question: "What is the primary purpose of Flutter?",
-    options: ["Game development", "AI research", "Mobile app development"],
+    question: "sin30?",
+    options: ["0.6", "0.5", "1"],
     correctAnswerIndex: 1, // Mobile app development
   ),
   QuestionModel(
