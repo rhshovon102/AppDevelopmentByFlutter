@@ -21,8 +21,6 @@ class _homeState extends State<home> {
       backgroundColor: Colors.black,
 
 
-      appBar: AppBar(title: Center(child: Text("CALCULATOR",style: TextStyle(fontSize: 65,fontWeight: FontWeight.bold))),backgroundColor: Colors.purple),
-
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.all(10.0),
@@ -561,61 +559,61 @@ class _homeState extends State<home> {
                           onPressed: (){
                             setState(() {
 
-                                if (flag == 2) {
-                                  result = value1 / double.parse(value);
-                                  final_result = '= ' + result.toString();
-                                }
+                              if (flag == 2) {
+                                result = value1 / double.parse(value);
+                                final_result = '= ' + result.toString();
+                              }
 
-                                else if (flag == 3) {
-                                  result = value1 * double.parse(value);
-                                  final_result = '= ' + result.toString();
-                                }
+                              else if (flag == 3) {
+                                result = value1 * double.parse(value);
+                                final_result = '= ' + result.toString();
+                              }
 
-                                else if (flag == 4) {
-                                  result = value1 - double.parse(value);
-                                  final_result = '= ' + result.toString();
-                                }
+                              else if (flag == 4) {
+                                result = value1 - double.parse(value);
+                                final_result = '= ' + result.toString();
+                              }
 
-                                else if (flag == 5) {
-                                  result = value1 + double.parse(value);
-                                  final_result = '= ' + result.toString();
-                                }
+                              else if (flag == 5) {
+                                result = value1 + double.parse(value);
+                                final_result = '= ' + result.toString();
+                              }
 
-                                else if (flag == 6) {
-                                  result = sin(double.parse(value));
-                                  final_result = '= ' + result.toString();
-                                }
+                              else if (flag == 6) {
+                                result = sin(double.parse(value) * pi / 180);
+                                final_result = '= ' + result.toString();
+                              }
 
-                                else if (flag == 7) {
-                                  result = cos(double.parse(value) * pi / 180);
-                                  final_result = '= ' + result.toString();
-                                }
+                              else if (flag == 7) {
+                                result = cos(double.parse(value) * pi / 180);
+                                final_result = '= ' + result.toString();
+                              }
 
-                                else if (flag == 8) {
-                                  result = tan(double.parse(value) * pi / 180);
-                                  final_result = '= ' + result.toString();
-                                }
+                              else if (flag == 8) {
+                                result = tan(double.parse(value) * pi / 180);
+                                final_result = '= ' + result.toString();
+                              }
 
-                                else if (flag == 9) {
-                                  result = sqrt(double.parse(value));
-                                  final_result = '= ' + result.toString();
-                                }
+                              else if (flag == 9) {
+                                result = sqrt(double.parse(value));
+                                final_result = '= ' + result.toString();
+                              }
 
-                                else if (flag == 10) {
-                                  result = log(double.parse(value)) / ln10;
-                                  final_result = '= ' + result.toString();
-                                }
+                              else if (flag == 10) {
+                                result = log(double.parse(value)) / ln10;
+                                final_result = '= ' + result.toString();
+                              }
 
-                                else if (flag == 11) {
-                                  result = log(double.parse(value));
-                                  final_result = '= ' + result.toString();
-                                }
+                              else if (flag == 11) {
+                                result = log(double.parse(value));
+                                final_result = '= ' + result.toString();
+                              }
 
-                                else if (flag == 12) {
-                                  result = pow(value1, double.parse(value)) as double;
-                                  final_result = '= ' + result.toString();
-                                }
-
+                              else if (flag == 12) {
+                                result = pow(value1, double.parse(value)) as double;
+                                final_result = '= ' + result.toString();
+                              }
+                              
                             });
                           },
                           child: Text("＝",style: TextStyle(fontSize: 30))),
